@@ -6,15 +6,31 @@ body, #tools-title {
    font-size: 20px;
 }
 
+#container {
+
+
+  display: grid;
+  grid-template-columns: 300px auto 300px;
+  grid-template-rows: 100px 300px 100px;
+  grid-gap: 10px;
+  background-color: #888;
+
+}
+
+#container > div {
+  background-color: #fff;
+  padding: 10px;
+}
+
 #tools {
+  z-index: 99;
   position: absolute;
   width: 160px;
   height: 600px;
-  top: 100px;
+  top: 400px;
   left: 10px;
   margin: 0;
   padding: 0;
-  z-index: 99;
   border: 2px solid #333;
   background: #333;
   margin: 3px;
@@ -49,12 +65,15 @@ body, #tools-title {
 
 #edit {
   position: absolute;
-  top: 10px;
+  bottom: 10px;
   right: 10px;
 }
 
 .tao {
-
+  z-index: 1;
+  border: solid 2px black;
+  width: 100%;
+  height: 100px;
 }
 
 .header {
