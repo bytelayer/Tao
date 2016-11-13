@@ -30,14 +30,14 @@
     <div class="box i">I</div>
   </div>
 
-  <div id="tools">
+  <div id="tools" class="window">
     <div id="tools-title">
       Tao Web Editor
     </div>
 
     <div id="tools-container">
-      <button id="tools-header" class="btn-block text-left"><i class="fa fa-header" aria-hidden="true"></i>&nbsp;&nbsp;Header</button>
       <button id="tools-div" class="btn-block text-left"><i class="icon ion-compose"></i>&nbsp;&nbsp;Div</button>
+      <button id="tools-header" class="btn-block text-left"><i class="fa fa-header" aria-hidden="true"></i>&nbsp;&nbsp;Header</button>
       <button class="btn-block text-left"><i class="icon ion-image"></i>&nbsp;&nbsp;Image</button>
       <!--<button id="tools-img" class="btn-block text-left"><i class="fa fa-file-image-o" aria-hidden="true">&nbsp;&nbsp;Image</i></button>-->
       <hr/>
@@ -56,6 +56,19 @@
     </div>-->
 
   </div>
+
+  <div id="gridx">
+    <div id="grid-title">
+      Grid Tools
+    </div>
+
+    <div id="grid-container">
+      <button id="tools-div" class="btn-block text-left"><i class="icon ion-compose"></i>&nbsp;&nbsp;Div</button>
+      <button id="tools-header" class="btn-block text-left"><i class="fa fa-header" aria-hidden="true"></i>&nbsp;&nbsp;Header</button>
+    </div>
+  </div>
+
+
 </body>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -66,6 +79,8 @@
 <script>
 $(function() {
   $("#tools").draggable({cursor: "all-scroll"});
+  $("#gridx").draggable({cursor: "all-scroll"});
+
 
   $("#tools-div").click(function() {
     $("#container").append("<div class='tao'>A div</div>");

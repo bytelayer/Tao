@@ -1,4 +1,4 @@
-body, #tools-title {
+body {
   font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier;
 }
 
@@ -34,6 +34,34 @@ body, #tools-title {
   border: 2px solid #333;
   background: #333;
   margin: 3px;
+}
+
+#gridx {
+  z-index: 99;
+  position: absolute;
+  width: 160px;
+  height: 300px;
+  bottom: 200px;
+  right: 10px;
+  margin: 0;
+  padding: 0;
+  border: 2px solid #333;
+  background: #333;
+  margin: 3px;
+  color: white;
+}
+
+
+#grid-container {
+  height: 270px; // Container must have height for scrollbar/overflow to work
+  overflow-y: scroll;
+  background: #eee;
+}
+
+#tools-container > hr {
+  height: 28px;
+  padding: 0;
+  margin: 0;
 }
 
 #tools-container {
