@@ -14,6 +14,10 @@
 </head>
 
 <body>
+  <div id="edit-button">
+    <button id="edit" class="btn-block text-left"><i class="fa fa-cogs" aria-hidden="true"></i>&nbsp;&nbsp;Edit</button>
+  </div>
+
   <div id="container">
   </div>
 
@@ -24,27 +28,13 @@
 
     <div id="tools-container">
       <button id="tools-header" class="btn-block text-left"><i class="fa fa-header" aria-hidden="true"></i>&nbsp;&nbsp;Header</button>
+      <button class="btn-block text-left"><i class="icon ion-compose"></i>&nbsp;&nbsp;Div</button>
       <button class="btn-block text-left"><i class="icon ion-image"></i>&nbsp;&nbsp;Image</button>
+      <hr/>
+      <button id="tools-list" class="btn-block text-left"><i class="fa fa-list" aria-hidden="true"></i>&nbsp;&nbsp;List</button>
       <button class="btn-block text-left"><i class="ion-android-radio-button-on"></i>&nbsp;&nbsp;Radio Button</button>
+      <button class="btn-block text-left"><i class="icon ion-quote"></i>&nbsp;&nbsp;Quote</button>
 
-      <button id="tools-header" class="btn-block text-left"><i class="fa fa-header" aria-hidden="true"></i>&nbsp;&nbsp;Header</button>
-      <button class="btn-block text-left"><i class="icon ion-image"></i>&nbsp;&nbsp;Image</button>
-      <button class="btn-block text-left"><i class="ion-android-radio-button-on"></i>&nbsp;&nbsp;Radio Button</button>
-      <button class="btn-block text-left"><i class="ion-android-radio-button-on"></i>&nbsp;&nbsp;Radio Button</button>
-      <button id="tools-header" class="btn-block text-left"><i class="fa fa-header" aria-hidden="true"></i>&nbsp;&nbsp;Header</button>
-      <button class="btn-block text-left"><i class="icon ion-image"></i>&nbsp;&nbsp;Image</button>
-      <hr>
-      <button class="btn-block text-left"><i class="ion-android-radio-button-on"></i>&nbsp;&nbsp;Radio Button</button>
-      <button class="btn-block text-left"><i class="ion-android-radio-button-on"></i>&nbsp;&nbsp;Radio Button</button>
-      <button id="tools-header" class="btn-block text-left"><i class="fa fa-header" aria-hidden="true"></i>&nbsp;&nbsp;Header</button>
-      <button class="btn-block text-left"><i class="icon ion-image"></i>&nbsp;&nbsp;Image</button>
-      <button class="btn-block text-left"><i class="ion-android-radio-button-on"></i>&nbsp;&nbsp;Radio Button</button>
-      <hr>
-      <button class="btn-block text-left"><i class="ion-android-radio-button-on"></i>&nbsp;&nbsp;Radio Button</button>
-      <button id="tools-header" class="btn-block text-left"><i class="fa fa-header" aria-hidden="true"></i>&nbsp;&nbsp;Header</button>
-      <button class="btn-block text-left"><i class="icon ion-image"></i>&nbsp;&nbsp;Image</button>
-      <button class="btn-block text-left"><i class="ion-android-radio-button-on"></i>&nbsp;&nbsp;Radio Button</button>
-      <button class="btn-block text-left"><i class="ion-android-radio-button-on"></i>&nbsp;&nbsp;Radio Button</button>
     </div>
 
     <div id="tools-bottom">
@@ -60,7 +50,6 @@
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="http://enscrollplugin.com/releases/enscroll-0.6.0.min.js"></script>
 
 <script>
 $(function() {
@@ -69,12 +58,10 @@ $(function() {
   $("#tools-header").click(function () {
     $("#container").append("<div class='header' style='width: 100%; height: 100px; background: red'>Hello, world!</div>");
   });
-});
 
-$("#tools-container").enscroll({
-  showOnHover: true,
-  verticalScrolling: true,
-
+  $("#tools-header").click(function () {
+    
+  });
 });
 
 </script>
