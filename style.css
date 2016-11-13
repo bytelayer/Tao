@@ -1,0 +1,42 @@
+body {
+  font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier;
+  overflow: hidden;
+}
+
+.icon {
+   font-size: 20px;
+}
+
+#tools {
+  position: absolute;
+  width: 160px;
+  height: 600px;
+  top: 50px;
+  left: 50px;
+  margin: 0;
+  padding: 0;
+  z-index: 99;
+  border: 2px solid #333;
+  background: #eee;
+}
+
+#tool-grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 3;
+  grid-template-rows: 20;
+}
+
+.tool {
+  width: 150px;
+  background: #ccc;
+}
+
+#title {
+  background: #333;
+  color: white;
+  font-size: 12px;
+  height: 20px;
+  text-align: center;
+  padding-top: 6px;
+}
