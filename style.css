@@ -1,6 +1,5 @@
-body {
+body, #tools-title {
   font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier;
-  overflow: hidden;
 }
 
 .icon {
@@ -17,8 +16,28 @@ body {
   padding: 0;
   z-index: 99;
   border: 2px solid #333;
-  background: #eee;
+  background: #333;
   margin: 3px;
+}
+
+#tools-container {
+  height: 530px; // Container must have height for scrollbar/overflow to work
+  overflow-y: scroll;
+  background: #eee;
+}
+
+#tools-title {
+  background: #333;
+  color: white;
+  font-size: 12px;
+  height: 28px;
+  text-align: center;
+  padding: 6px;
+}
+
+#tools-bottom {
+  padding: 3px;
+  
 }
 
 #tool-grid {
@@ -37,12 +56,34 @@ body {
   background: #ccc;
 }
 
-#tools-title {
-  background: #333;
-  color: white;
-  font-size: 12px;
-  height: 24px;
-  text-align: center;
-  padding: 6px;
-  margin-bottom: 3px;
+
+
+.track3 {
+    width: 10px;
+    background: rgba(0, 0, 0, 0);
+    margin-right: 2px;
+    border-radius: 10px;
+    -webkit-transition: background 250ms linear;
+    transition: background 250ms linear;
+}
+
+.track3:hover,
+.track3.dragging {
+    background: #d9d9d9;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.handle3 {
+    width: 7px;
+    right: 0;
+    background: #999;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 7px;
+    -webkit-transition: width 250ms;
+    transition: width 250ms;
+}
+
+.track3:hover .handle3,
+.track3.dragging .handle3 {
+    width: 10px;
 }
