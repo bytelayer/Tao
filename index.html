@@ -14,8 +14,8 @@
 </head>
 
 <body>
-  <div id="edit-button">
-    <button id="edit" class="btn-block text-left"><i class="fa fa-cogs" aria-hidden="true"></i>&nbsp;&nbsp;Edit</button>
+  <div id="edit">
+    <button id="edit-preview" class="btn-block text-left"><i class="fa fa-cogs" aria-hidden="true"></i>&nbsp;&nbsp;Preview</button>
   </div>
 
   <div id="container">
@@ -28,7 +28,7 @@
 
     <div id="tools-container">
       <button id="tools-header" class="btn-block text-left"><i class="fa fa-header" aria-hidden="true"></i>&nbsp;&nbsp;Header</button>
-      <button class="btn-block text-left"><i class="icon ion-compose"></i>&nbsp;&nbsp;Div</button>
+      <button id="tools-div" class="btn-block text-left"><i class="icon ion-compose"></i>&nbsp;&nbsp;Div</button>
       <button class="btn-block text-left"><i class="icon ion-image"></i>&nbsp;&nbsp;Image</button>
       <hr/>
       <button id="tools-list" class="btn-block text-left"><i class="fa fa-list" aria-hidden="true"></i>&nbsp;&nbsp;List</button>
@@ -37,12 +37,13 @@
 
     </div>
 
+    <!--
     <div id="tools-bottom">
       <div class="btn-group-xs btn-group-justifiedx" role="group">
         <button type="button" class="btn"><i class="icon ion-reply"></i>&nbsp;Undo</button>
         <button type="button" class="btn"><i class="icon ion-forward"></i>&nbsp;Redo</button>
       </div>
-    </div>
+    </div>-->
 
   </div>
 </body>
@@ -50,20 +51,32 @@
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="tao.js">
 
 <script>
 $(function() {
   $("#tools").draggable({cursor: "all-scroll"});
 
-  $("#tools-header").click(function () {
-    $("#container").append("<div class='header' style='width: 100%; height: 100px; background: red'>Hello, world!</div>");
+  $("#tools-div").click(function() {
+
   });
 
-  $("#tools-header").click(function () {
-    
+  $("#tools-header").click(function() {
+    $("#container").append("<div class='tao header'>Hello, world!</div>)");
+    $(".tao").selectable();
+  });
+
+  $("#tools-header").click(function() {
+    if ($("#edit-preview").text() == "Preview") {
+      $("#edit-preview").html("Edit");
+      $("#tools").hide();
+    }
+    else {
+      $("#edit-preview").html("Preview");
+      $("#tools").show();
+    }
   });
 });
-
 </script>
 
 </html>
