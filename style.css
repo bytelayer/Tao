@@ -11,13 +11,14 @@ body {
   position: absolute;
   width: 160px;
   height: 600px;
-  top: 50px;
-  left: 50px;
+  top: 100px;
+  left: 10px;
   margin: 0;
   padding: 0;
   z-index: 99;
   border: 2px solid #333;
   background: #eee;
+  margin: 3px;
 }
 
 #tool-grid {
@@ -32,11 +33,12 @@ body {
   background: #ccc;
 }
 
-#title {
+#tools-title {
   background: #333;
   color: white;
   font-size: 12px;
-  height: 20px;
+  height: 24px;
   text-align: center;
-  padding-top: 6px;
+  padding: 6px;
+  margin-bottom: 3px;
 }
