@@ -28,6 +28,10 @@ body {
   grid-template-rows: 20;
 }
 
+.btn-block {
+  height: 30px;
+}
+
 .tool {
   width: 150px;
   background: #ccc;
