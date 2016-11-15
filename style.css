@@ -7,14 +7,18 @@ body {
 }
 
 #container {
-
+  height: 1000px;
 
   display: grid;
-  grid-template-columns: 300px auto 300px;
-  grid-template-rows: 100px 300px 100px;
+  grid-template-columns: 160px 300px auto 300px;
+  grid-template-rows: 100px auto 100px;
   grid-gap: 10px;
-  background-color: #888;
+  grid-template-areas: "left top top right"
+                       "left main main  right"
+                       "left footer footer footer"
 
+
+  background-color: #888;
 }
 
 #container > div {
@@ -23,12 +27,14 @@ body {
 }
 
 #tools {
+  grid-area: left;
+
   z-index: 99;
-  position: absolute;
-  width: 160px;
-  height: 600px;
-  top: 400px;
-  left: 10px;
+  //position: absolute;
+  //width: 160px;
+  //height: 600px;
+
+
   margin: 0;
   padding: 0;
   border: 2px solid #333;
@@ -36,7 +42,7 @@ body {
   margin: 3px;
 }
 
-#gridx {
+#grid-win {
   z-index: 99;
   position: absolute;
   width: 160px;
@@ -117,4 +123,8 @@ body {
 .tool {
   width: 150px;
   background: #ccc;
+}
+
+.tao-header {
+  grid-area: 1/1/1/3;
 }

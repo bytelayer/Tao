@@ -13,9 +13,13 @@
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 </head>
 
+<script>
+var previewMode = false;
+</script>
+
 <body>
   <div id="edit">
-    <button id="edit-preview" class="btn-block text-left"><i class="fa fa-cogs" aria-hidden="true"></i>&nbsp;&nbsp;Preview</button>
+    <button id="preview-btn" class="btn-block text-left"><i class="fa fa-cogs" aria-hidden="true"></i>&nbsp;&nbsp;Preview</button>
   </div>
 
   <div id="container">
@@ -32,7 +36,7 @@
 
   <div id="tools" class="window">
     <div id="tools-title">
-      Tao Web Editor
+      Web Components
     </div>
 
     <div id="tools-container">
@@ -57,7 +61,7 @@
 
   </div>
 
-  <div id="gridx">
+  <div id="grid-win">
     <div id="grid-title">
       Grid Tools
     </div>
@@ -78,8 +82,8 @@
 
 <script>
 $(function() {
-  $("#tools").draggable({cursor: "all-scroll"});
-  $("#gridx").draggable({cursor: "all-scroll"});
+  //$("#tools").draggable({cursor: "all-scroll"});
+  //$("#gridx").draggable({cursor: "all-scroll"});
 
 
   $("#tools-div").click(function() {
@@ -87,21 +91,19 @@ $(function() {
   });
 
   $("#tools-header").click(function() {
-    $("#container").append("<div class='tao header'>XXX Hello, world!</div>");
-    //$(".tao").selectable();
+    //$("#container").append("<div class='tao header'>XXX Hello, world!</div>");
+    $("#container").append("<div class='tao-header'>XXX Hello, world!</div>");
+
   });
 
-  $("#edit").click(function() {
-    if ($("#edit-preview").text() == "Preview") {
-      $("#edit-preview").html("Edit");
-      $("#tools").hide();
-    }
-    else {
-      $("#edit-preview").html("Preview");
-      $("#tools").show();
-    }
-  });
 });
+
+$("#preview-btn").click(function() {
+  previewMode = true;
+  $("#tools").hide();
+  $("#grid-win").hide();
+});
+
 </script>
 
 </html>
