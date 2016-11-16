@@ -10,46 +10,39 @@
 </head>
 
 <body>
-  <div id="edit">
-    <button id="preview-btn" class="btn-block text-left"><i class="fa fa-cogs" aria-hidden="true"></i>&nbsp;&nbsp;Preview</button>
-  </div>
 
-  <div id="container">
-    <div id="tools" class="window">
-      <div id="tools-title">
-        Web Components
+    <div id="container">
+      <div id="left">
+        <div id="tools" class="window">
+          <div id="tools-title">
+            Web Components
+          </div>
+
+          <div id="tools-container">
+            <button id="tools-div" class="btn-block text-left"><i class="icon ion-compose"></i>&nbsp;&nbsp;Div</button>
+            <button id="tools-header" class="btn-block text-left"><i class="fa fa-header" aria-hidden="true"></i>&nbsp;&nbsp;Header</button>
+            <button class="btn-block text-left"><i class="icon ion-image"></i>&nbsp;&nbsp;Image</button>
+            <!--<button id="tools-img" class="btn-block text-left"><i class="fa fa-file-image-o" aria-hidden="true">&nbsp;&nbsp;Image</i></button>-->
+            <hr/>
+            <button id="tools-list" class="btn-block text-left"><i class="fa fa-list" aria-hidden="true"></i>&nbsp;&nbsp;List</button>
+            <button class="btn-block text-left"><i class="ion-android-radio-button-on"></i>&nbsp;&nbsp;Radio Button</button>
+            <button class="btn-block text-left"><i class="icon ion-quote"></i>&nbsp;&nbsp;Quote</button>
+
+          </div>
+
+        </div>
       </div>
 
-      <div id="tools-container">
-        <button id="tools-div" class="btn-block text-left"><i class="icon ion-compose"></i>&nbsp;&nbsp;Div</button>
-        <button id="tools-header" class="btn-block text-left"><i class="fa fa-header" aria-hidden="true"></i>&nbsp;&nbsp;Header</button>
-        <button class="btn-block text-left"><i class="icon ion-image"></i>&nbsp;&nbsp;Image</button>
-        <!--<button id="tools-img" class="btn-block text-left"><i class="fa fa-file-image-o" aria-hidden="true">&nbsp;&nbsp;Image</i></button>-->
-        <hr/>
-        <button id="tools-list" class="btn-block text-left"><i class="fa fa-list" aria-hidden="true"></i>&nbsp;&nbsp;List</button>
-        <button class="btn-block text-left"><i class="ion-android-radio-button-on"></i>&nbsp;&nbsp;Radio Button</button>
-        <button class="btn-block text-left"><i class="icon ion-quote"></i>&nbsp;&nbsp;Quote</button>
-
+      <div id="main">
+        Main
       </div>
 
-    </div>
-    
-  </div>
-
-
-  <div id="grid-win">
-    <div id="grid-title">
-      Grid Tools
+      <div id="right">
+        Right
+      </div>
     </div>
 
-    <div id="grid-container">
-      <button id="tools-div" class="btn-block text-left"><i class="icon ion-compose"></i>&nbsp;&nbsp;Div</button>
-      <button id="tools-header" class="btn-block text-left"><i class="fa fa-header" aria-hidden="true"></i>&nbsp;&nbsp;Header</button>
-    </div>
-  </div>
 
-
-</body>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
@@ -77,5 +70,5 @@ $("#preview-btn").click(function() {
 });
 
 </script>
-
+</body>
 </html>
