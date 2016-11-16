@@ -10,30 +10,31 @@ body {
 }
 
 #container {
-  height: auto;
-  background-color: green;
+  height: 100%;
+  background-color: #333;
   display: grid;
-  grid-template-columns: 200px auto 200px;
-  grid-template-rows: 200px 300px 200px;
-  grid-gap: 15px;
+  grid-template-columns: 150px auto 150px;
+  grid-template-rows: auto 50px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
 
-  grid-template-areas: "header header header"
-                       "left main right"
-                       "footer footer footer"
+  grid-template-areas: "left main right"
+                       "left bottom right"
+
 }
 
 #main {
   grid-area: main;
-}
-
-#header {
-  grid-area: header;
-  background: #fcae76;
+  background: #eee;
 }
 
 #footer {
-  grid-area: footer;
+  grid-area: bottom;
   background: #f376a8;
+}
+
+#left {
+  grid-area: left;
 }
 
 #container > div {
@@ -46,21 +47,17 @@ body {
 
 <body>
   <div id="container">
-    <div id="footer">
-      Footer
+    <div id="left">
+      Left
     </div>
 
     <div id="main">
       Main
     </div>
 
-    <div id="header">
-      Header
+    <div id="right">
+      Right
     </div>
-
-
   </div>
-
 </body>
-
 </html>

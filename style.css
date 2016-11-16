@@ -7,10 +7,9 @@ body {
 }
 
 #container {
-  height: 1000px;
-
+  color: red;
   display: grid;
-  grid-template-columns: 160px auto 1600px;
+  grid-template-columns: 260px auto 1600px;
   grid-template-rows: auto 100px;
   grid-gap: 10px;
   grid-template-areas: "left main right"
@@ -19,19 +18,11 @@ body {
   background-color: #888;
 }
 
-#container > div {
-  background-color: #fff;
-  padding: 10px;
-}
 
 #tools {
   grid-area: left;
 
   z-index: 99;
-  //position: absolute;
-  //width: 160px;
-  //height: 600px;
-
 
   margin: 0;
   padding: 0;
@@ -69,7 +60,7 @@ body {
 }
 
 #tools-container {
-  height: 530px; // Container must have height for scrollbar/overflow to work
+  /*height: 530px; // Container must have height for scrollbar/overflow to work*/
   overflow-y: scroll;
   background: #eee;
 }
@@ -85,7 +76,6 @@ body {
 
 #tools-bottom {
   padding: 3px;
-
 }
 
 #tool-grid {
