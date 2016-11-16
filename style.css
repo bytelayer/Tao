@@ -13,7 +13,7 @@ body {
 }
 
 #container {
-  height: 100%;
+  height: 100vh;
   background-color: #333;
   display: grid;
   grid-template-columns: 150px auto 150px;
@@ -24,6 +24,13 @@ body {
   grid-template-areas: "left main right"
                        "left bottom right"
 
+}
+
+#main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 10fr 1fr;
+  grid-gap: 5px;
 }
 
 #main {
@@ -51,28 +58,6 @@ body {
   border: 2px solid #333;
   background: #333;
   margin: 3px;
-}
-
-#grid-win {
-  z-index: 99;
-  position: absolute;
-  width: 160px;
-  height: 300px;
-  bottom: 200px;
-  right: 10px;
-  margin: 0;
-  padding: 0;
-  border: 2px solid #333;
-  background: #333;
-  margin: 3px;
-  color: white;
-}
-
-
-#grid-container {
-  height: 270px; // Container must have height for scrollbar/overflow to work
-  overflow-y: scroll;
-  background: #eee;
 }
 
 #tools-container > hr {
