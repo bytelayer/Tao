@@ -10,13 +10,11 @@ body {
   height: 1000px;
 
   display: grid;
-  grid-template-columns: 160px 300px auto 300px;
-  grid-template-rows: 100px auto 100px;
+  grid-template-columns: 160px auto 1600px;
+  grid-template-rows: auto 100px;
   grid-gap: 10px;
-  grid-template-areas: "left top top right"
-                       "left main main  right"
-                       "left footer footer footer"
-
+  grid-template-areas: "left main right"
+                       "b b b"
 
   background-color: #888;
 }
