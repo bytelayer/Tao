@@ -27,14 +27,14 @@
             <button id="tools-list" class="btn-block text-left"><i class="fa fa-list" aria-hidden="true"></i>&nbsp;&nbsp;List</button>
             <button class="btn-block text-left"><i class="ion-android-radio-button-on"></i>&nbsp;&nbsp;Radio Button</button>
             <button class="btn-block text-left"><i class="icon ion-quote"></i>&nbsp;&nbsp;Quote</button>
-            <button class="btn-block text-left"><i class="icon ion-quote"></i>&nbsp;&nbsp;Quote</button>
+            <button id="save" class="btn-block text-left"><i class="icon ion-quote"></i>&nbsp;&nbsp;Save</button>
 
           </div>
         </div>
       </div>
 
       <div id="main">
-        <div class="test">A</div>
+        <div id="a" class="test">A</div>
         <div class="test">B</div>
         <div class="test">C</div>
         <div class="test">D</div>
@@ -71,14 +71,21 @@ $(function() {
     $("#container").append("<div class='header'>XXX Hello, world!</div>");
   });
 
+  $("#save").click(() => {
+    var html = $("html").clone();
+    var htmlString = html.html();
+    //$("#a").text(htmlString)
+    //alert("hi");
+    alert(htmlString);
+  });
+
 });
 
-$("#preview-btn").click(function() {
+$("#preview-btn").click(() => {
   previewMode = true;
   $("#tools").hide();
   $("#grid-win").hide();
 });
-
 </script>
 </body>
 </html>
