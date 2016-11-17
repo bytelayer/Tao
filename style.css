@@ -26,15 +26,21 @@ body {
 
 }
 
-#main-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 10fr 1fr;
-  grid-gap: 5px;
+.test {
+  background: #ffaacc;
 }
+
 
 #main {
   grid-area: main;
+  display: grid;
+  height: 100%;
+
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+
   background: #eee;
 }
 
@@ -58,6 +64,7 @@ body {
   border: 2px solid #333;
   background: #333;
   margin: 3px;
+
 }
 
 #tools-container > hr {
@@ -68,7 +75,7 @@ body {
 
 #tools-container {
   /*height: 530px; // Container must have height for scrollbar/overflow to work*/
-  overflow-y: scroll;
+
   background: #eee;
 }
 
