@@ -27,7 +27,8 @@ body {
 }
 
 .test {
-  background: #ffaacc;
+  background: #37eafc;
+
 }
 
 
@@ -38,8 +39,11 @@ body {
 
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
+  grid-column-gap: 3px;
+  grid-row-gap: 3px;
+  grid-template-areas: "h h h"
+                       "l c r"
+                       "f f f"
 
   background: #eee;
 }
@@ -116,6 +120,7 @@ body {
   width: 100%;
   height: 100px;
   background: #ccc;
+  grid-area: h;
 }
 
 .btn-block {
