@@ -35,8 +35,8 @@
 
       <div id="main">
         <div id="a" class="test">A</div>
-        <div class="test">B</div>
-        <div class="test">C</div>
+        <div id="b" class="test">B</div>
+        <div id="c" class="test">C</div>
         <div class="test">D</div>
         <div class="test">E</div>
         <div class="test">F</div>
@@ -67,7 +67,13 @@ $(document).ready(() => {
 
   $("#tools-div").click(function() {
     //$("#container").append("<div class='tao'>A div</div>");
-    $("#a").css("background", "lime")
+    $("#b").remove();
+    $("#c").remove();
+    $("#a").css("background", "lime");
+    $("#a").css("grid-column-start", "1");
+    $("#a").css("grid-column-end", "4");
+    $("#a").css("grid-row-start", "1");
+    $("#a").css("grid-row-end", "2");
   });
 
   $("#tools-header").click(function() {
