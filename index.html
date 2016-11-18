@@ -66,7 +66,9 @@ $(document).ready(() => {
   $("#a").resizable();
 
   $("#tools-div").click(function() {
-    //$("#container").append("<div class='tao'>A div</div>");
+  });
+
+  $("#tools-header").click(() => {
     $("#b").remove();
     $("#c").remove();
     $("#a").css("background", "lime");
@@ -74,10 +76,8 @@ $(document).ready(() => {
     $("#a").css("grid-column-end", "4");
     $("#a").css("grid-row-start", "1");
     $("#a").css("grid-row-end", "2");
-  });
-
-  $("#tools-header").click(function() {
-    $("#container").append("<div class='header'>XXX Hello, world!</div>");
+    $("#a").attr("contenteditable","true");
+    $(firstCol()).css("background", "red")
   });
 
   $("#save").click(() => {
