@@ -29,6 +29,10 @@
             <button class="btn-block text-left"><i class="icon ion-quote"></i>&nbsp;&nbsp;Quote</button>
             <button id="save" class="btn-block text-left"><i class="icon ion-quote"></i>&nbsp;&nbsp;Save</button>
 
+            <button id="tool-add-col" class="btn-block text-left"><i class="icon ion-quote"></i>&nbsp;&nbsp;Add Column</button>
+            <button id="tool-add-row" class="btn-block text-left"><i class="icon ion-quote"></i>&nbsp;&nbsp;Add Row</button>
+
+
           </div>
         </div>
       </div>
@@ -37,12 +41,12 @@
         <div id="a" class="test">A</div>
         <div id="b" class="test">B</div>
         <div id="c" class="test">C</div>
-        <div class="test">D</div>
-        <div class="test">E</div>
-        <div class="test">F</div>
-        <div class="test">G</div>
-        <div class="test">H</div>
-        <div class="test">I</div>
+        <div id="d" class="test">D</div>
+        <div id="e" class="test">E</div>
+        <div id="f" class="test">F</div>
+        <div id="g" class="test">G</div>
+        <div id="h" class="test">H</div>
+        <div id="i" class="test">I</div>
       </div>
 
       <div id="right">
@@ -53,8 +57,6 @@
         Bottom
       </div>
     </div>
-
-
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
@@ -96,6 +98,16 @@ $(document).ready(() => {
     previewMode = true;
     $("#tools").hide();
     $("#grid-win").hide();
+  });
+
+  $("#tool-add-col").click(() => {
+    //s = $("#main").get(0).style.grid-template-columns; //css("grid-template-columns");
+    //alert(s);
+    $("#main").css("grid-template-columns", "1fr 2fr 1fr 1fr")
+  });
+
+  $("#tool-add-row").click(() => {
+    $("#main").css("grid-template-rows", "1fr 2fr 1fr 1fr")
   });
 });
 
